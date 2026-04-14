@@ -7,10 +7,36 @@ const outfit = Outfit({
   variable: "--font-outfit",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: 0,
+  themeColor: "#0d0d12",
+};
+
 export const metadata: Metadata = {
   title: "Tiny Coder | Algorithms for Beginners",
   description: "Teach a robot to think. One logic chip at a time.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0",
+  openGraph: {
+    title: "Tiny Coder | Algorithms for Beginners",
+    description: "Build logic sequences to guide a robot through cyber challenges.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tiny Coder Game Thumbnail",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tiny Coder",
+    description: "Build logic sequences to guide a robot through cyber challenges.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
