@@ -16,6 +16,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://onebitgame.netlify.app'),
   title: "Tiny Coder | Algorithms for Beginners",
   description: "Teach a robot to think. One logic chip at a time.",
   openGraph: {
