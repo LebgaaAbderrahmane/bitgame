@@ -25,12 +25,15 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.jpg",
+        secureUrl: "https://onebitgame.netlify.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Tiny Coder Game Thumbnail",
       },
     ],
     type: "website",
+    siteName: "Tiny Coder",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
