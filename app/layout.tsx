@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Build logic sequences to guide a robot through cyber challenges.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Tiny Coder Game Thumbnail",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tiny Coder",
     description: "Build logic sequences to guide a robot through cyber challenges.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
 };
 
