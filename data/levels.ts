@@ -10,7 +10,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE"],
     instruction: "The robot needs to reach the star. Use MOVE to go forward!",
-    hint: "Tap MOVE 5 times to reach the star."
+    hint: "Tap MOVE 5 times to reach the star.",
+    maxCards: 5
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "TURN_RIGHT"],
     instruction: "Moving forward isn't enough. You can TURN RIGHT to change direction.",
-    hint: "MOVE, MOVE, TURN RIGHT, then MOVE."
+    hint: "MOVE, MOVE, TURN RIGHT, then MOVE.",
+    maxCards: 4
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "TURN_LEFT", "TURN_RIGHT"],
     instruction: "Use your turns carefully to navigate the grid.",
-    hint: "You need 2 moves, but maybe a turn first? Wait, no, just MOVE, MOVE."
+    hint: "You need 2 moves, but maybe a turn first? Wait, no, just MOVE, MOVE.",
+    maxCards: 2
   },
   {
     id: 4,
@@ -43,7 +46,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "REPEAT"],
     instruction: "Repeating yourself? Use REPEAT to do multiple steps at once!",
-    hint: "Add a REPEAT card, set it to 5, and drag a MOVE inside."
+    hint: "Add a REPEAT card, set it to 5, and drag a MOVE inside.",
+    maxCards: 2
   },
   {
     id: 5,
@@ -54,7 +58,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "TURN_LEFT", "TURN_RIGHT", "REPEAT"],
     instruction: "Walls are impassable! You must go around them.",
-    hint: "Turn right, move down, then turn left to pass under the wall."
+    hint: "Turn right, move down, then turn left to pass under the wall.",
+    maxCards: 5
   },
   {
     id: 6,
@@ -65,7 +70,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "REPEAT"],
     instruction: "Sometimes a single loop is all you need.",
-    hint: "Just one MOVE inside a REPEAT."
+    hint: "Just one MOVE inside a REPEAT.",
+    maxCards: 2
   },
   {
     id: 7,
@@ -76,7 +82,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "IF_GEM", "JUMP"],
     instruction: "Wait! There's a gem. Use IF GEM to jump over it.",
-    hint: "MOVE, IF GEM { JUMP }, MOVE."
+    hint: "MOVE, IF GEM { JUMP }, MOVE.",
+    maxCards: 4
   },
   {
     id: 8,
@@ -87,7 +94,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "IF_WALL", "TURN_RIGHT", "TURN_LEFT"],
     instruction: "Walls block your way. Use IF WALL to turn if the path is blocked.",
-    hint: "Use IF WALL to decide when to turn based on your surroundings."
+    hint: "Use IF WALL to decide when to turn based on your surroundings.",
+    maxCards: 4
   },
   {
     id: 9,
@@ -98,7 +106,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "IF_GEM", "IF_WALL", "REPEAT", "TURN_LEFT", "TURN_RIGHT"],
     instruction: "Combine conditionals and loops for ultimate control.",
-    hint: "A loop can contain multiple IF statements."
+    hint: "A loop can contain multiple IF statements.",
+    maxCards: 6
   },
   {
     id: 10,
@@ -109,7 +118,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "STORE", "USE"],
     instruction: "Gems can tell us distance. Use STORE to remember steps until a gem, then USE it.",
-    hint: "Move to the gem, STORE, then move to the star using USE."
+    hint: "Move to the gem, STORE, then move to the star using USE.",
+    maxCards: 6
   },
   {
     id: 11,
@@ -120,7 +130,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "STORE", "USE", "REPEAT"],
     instruction: "Use variables to repeat a precise number of times.",
-    hint: "STORE can capture how many steps you've taken."
+    hint: "STORE can capture how many steps you've taken.",
+    maxCards: 4
   },
   {
     id: 12,
@@ -131,7 +142,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "STORE", "USE"],
     instruction: "Every time you STORE, the previous value is updated.",
-    hint: "Think about which value you need to remember last."
+    hint: "Think about which value you need to remember last.",
+    maxCards: 8
   },
   {
     id: 13,
@@ -142,7 +154,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "TURN_RIGHT", "TURN_LEFT", "CREATE_BLOCK", "CALL"],
     instruction: "Create your own blocks! Blocks group cards together. Define 'ZIGZAG'.",
-    hint: "Create a block with MOVE, TURN, MOVE, TURN back. Then CALL it twice."
+    hint: "Create a block with MOVE, TURN, MOVE, TURN back. Then CALL it twice.",
+    maxCards: 3
   },
   {
     id: 14,
@@ -153,7 +166,8 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "TURN_RIGHT", "REPEAT", "CREATE_BLOCK", "CALL"],
     instruction: "Loops can call blocks too! This is real programming.",
-    hint: "Put a CALL inside a REPEAT loop."
+    hint: "Put a CALL inside a REPEAT loop.",
+    maxCards: 4
   },
   {
     id: 15,
@@ -164,6 +178,7 @@ export const LEVELS: Level[] = [
     ],
     availableCards: ["MOVE", "REPEAT", "IF_GEM", "IF_WALL", "CREATE_BLOCK", "CALL", "TURN_LEFT", "TURN_RIGHT"],
     instruction: "Use everything you've learned. Sequences, Loops, Conditionals, and Blocks.",
-    hint: "Walls block row 0. You'll need to use row 1 to bypass them!"
+    hint: "Walls block row 0. You'll need to use row 1 to bypass them!",
+    maxCards: 10
   }
 ];

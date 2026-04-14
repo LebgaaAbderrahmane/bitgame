@@ -39,6 +39,7 @@ export interface Level {
   availableCards: CardType[];
   instruction: string;
   hint: string;
+  maxCards: number;
   startPos?: [number, number];
 }
 

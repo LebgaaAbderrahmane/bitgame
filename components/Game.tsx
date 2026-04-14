@@ -22,7 +22,9 @@ export const Game: React.FC = () => {
     editCard,
     closeContainer,
     nextLevel, 
-    setProgram 
+    setProgram,
+    totalCardCount,
+    canAddCard
   } = useGame();
 
   const [showLevelSelect, setShowLevelSelect] = useState(false);
@@ -92,8 +94,13 @@ export const Game: React.FC = () => {
 
       {/* Code Editor Area */}
       <section className="flex-1 flex flex-col glass rounded-t-[40px] shadow-[0_-20px_50px_rgba(0,0,0,0.5)] z-10 overflow-hidden min-h-0 touch-auto">
-        <div className="flex justify-between items-center px-8 py-6">
-          <h2 className="text-xs font-black uppercase tracking-[0.2em] text-white/30">Your Sequence</h2>
+        <div className="flex justify-between items-center px-8 py-4">
+          <div className="flex flex-col">
+            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-white/30">Your Sequence</h2>
+            <div className={`text-[10px] font-bold uppercase transition-colors ${totalCardCount >= level.maxCards ? 'text-red-400' : 'text-cyan-400/60'}`}>
+              Chips: {totalCardCount} / {level.maxCards}
+            </div>
+          </div>
           <div className="flex gap-2">
              <button 
               onClick={() => {
@@ -127,7 +134,7 @@ export const Game: React.FC = () => {
           onAdd={(type) => addCard(type)}
           onCloseContainer={closeContainer}
           activeContainerId={gameState.activeContainerId}
-          disabled={gameState.isExecuting}
+          disabled={gameState.isExecuting || !canAddCard}
         />
       </section>
 

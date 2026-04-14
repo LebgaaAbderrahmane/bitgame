@@ -218,7 +218,21 @@ export function useGame() {
     executionRef.current = false;
   };
 
+  const getTotalCardCount = (program: ActionCard[]): number => {
+    let count = 0;
+    program.forEach(card => {
+      count++; // The card itself
+      if (card.children) {
+        count += getTotalCardCount(card.children);
+      }
+    });
+    return count;
+  };
+
   const addCard = (type: CardType) => {
+    const currentCount = getTotalCardCount(gameState.program);
+    if (currentCount >= level.maxCards) return;
+
     const id = Math.random().toString(36).substr(2, 9);
     const isContainer = ['REPEAT', 'IF_GEM', 'IF_WALL'].includes(type);
 
@@ -316,6 +330,8 @@ export function useGame() {
     removeCard,
     editCard,
     closeContainer,
+    totalCardCount: getTotalCardCount(gameState.program),
+    canAddCard: getTotalCardCount(gameState.program) < level.maxCards,
     setProgram: (program: ActionCard[]) => updateState({ program }),
     nextLevel: () => {
       const nextIdx = (currentLevelIdx + 1) % LEVELS.length;
